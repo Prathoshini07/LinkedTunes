@@ -1,0 +1,30 @@
+# Project: main.cpp
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = 
+OBJ  = ../../../Downloads/LinkedTunes-main/LinkedTunes-main/DSA_PACKAGE_CODE.o $(RES)
+LINKOBJ  = ../../../Downloads/LinkedTunes-main/LinkedTunes-main/DSA_PACKAGE_CODE.o $(RES)
+LIBS =  -lwinmm  
+INCS = 
+CXXINCS = 
+BIN  = main.cpp
+CXXFLAGS = $(CXXINCS)  
+CFLAGS = $(INCS)  
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before main.cpp all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o "main.cpp" $(LIBS)
+
+../../../Downloads/LinkedTunes-main/LinkedTunes-main/DSA_PACKAGE_CODE.o: ../../../Downloads/LinkedTunes-main/LinkedTunes-main/DSA_PACKAGE_CODE.cpp
+	$(CPP) -c ../../../Downloads/LinkedTunes-main/LinkedTunes-main/DSA_PACKAGE_CODE.cpp -o ../../../Downloads/LinkedTunes-main/LinkedTunes-main/DSA_PACKAGE_CODE.o $(CXXFLAGS)
